@@ -12,31 +12,21 @@
 
 <body>
     <div class="container mt-4">
-        <h2>Danh Sách Người Dùng</h2>
+        <h2>Chi Tiết Người Dùng</h2>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">STT</th>
+                 
                     <th scope="col">Username</th>
                     <th scope="col">Fullname</th>
                     <th scope="col">Address</th>
-                    <th scope="col">Settings</th>
+                  
                 </tr>
             </thead>
             <tbody>
-                <% for (let i = 0; i < data.row.length; i++) { %>
                     <tr>
-                      <th scope="row"><%= i + 1 %></th>
-                      <td><%= data.row[i].username %></td>
-                      <td><%= data.row[i].fullname %></td>
-                      <td><%= data.row[i].address %></td>
-                      <td style="display: flex; gap: 10px;">
-                        <a href="/detailUser/<%= data.row[i].id %>"><i class="fas fa-eye"></i> Xem</a>
-                        <a href="/edit-user/<%= data.row[i].id %>"><i class="fas fa-edit"></i> Sửa</a>
-                        <a href="/delUser/<%= data.row[i].id %>"><i class="fas fa-trash-alt"></i> Xóa</a>
-                      </td>
+                        <td><%=data.row.username  %></td>
                     </tr>
-                  <% } %>
             </tbody>
         </table>
     </div>

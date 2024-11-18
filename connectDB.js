@@ -1,12 +1,12 @@
-import mysql from 'mysql2';
+import mysql2 from 'mysql2'; // Sử dụng mysql2
 
-// Tạo kết nối
-const pool = mysql.createPool({
-    host: 'localhost', // Địa chỉ máy chủ
-    user: 'root', // Tên người dùng
-    password: '', // Mật khẩu
-    database: 'mysql_node' // Tên cơ sở dữ liệu
+const pool = mysql2.createPool({
+  host: 'localhost',
+  user: 'root',
+  database: 'mysql_node',
+  password: '',
 });
-const connection = pool.connection();
-export default connection
 
+const connection = pool.promise(); // Sử dụng pool.promise()
+
+export default connection;
